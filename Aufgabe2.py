@@ -23,7 +23,4 @@ while True:
 		print("Die ", var, "te Fibonacci Zahl ist : ", i_fib(var), "(Iterativ)")
 		break
 
-
-print(r_fib(var))
-print(i_fib(var))
 	

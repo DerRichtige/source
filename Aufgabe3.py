@@ -1,10 +1,11 @@
-import time 
-var = input("geben Sie ihr Geburtstag ein mit Leerzeichen getrennt : ")
-l1 = var.split()
-t = time.localtime()
-a = time.asctime(t)
-l2 = a.split()
-y = int(l2[4]) - int(l1[2])
-m = 5 - l1[1]
-d = int(l2[2]) - int(l1[0])
-print ("Sie sind ca.", d+m*30+y*365, "Jahre alt ...")
+import datetime
+
+while True:
+	bd = input("Geben Sie ihr Geburtstag ein : ").split(".")
+	if len(bd) == 1:
+		bd=bd[0].split()
+	elif len(bd) == 3:
+		break
+
+d = datetime.datetime.now()-datetime.datetime(int(bd[2]),int(bd[1]),int(bd[0]))
+print(f"Sie sind {d.days} Tage alt!")
